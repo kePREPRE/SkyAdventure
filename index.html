@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkyAdventure</title>
+  <link rel="stylesheet" href="Assets/Css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar fija -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">SkyAdventure</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#tours">Tours</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Carousel -->
+<header class="carousel slide vh-100 d-flex align-items-center justify-content-center text-center text-white bg-secondary" id="mainCarousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container">
+        <h1>Vive la aventura</h1>
+        <p>Explora el mundo con SkyAdventure</p>
+        <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#reservaModal">Reservar</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Modal -->
+<div class="modal fade" id="reservaModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Reserva tu Aventura</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Este es un modal de ejemplo para reservar tu experiencia con SkyAdventure.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sección Tours -->
+<section id="tours" class="py-5">
+  <div class="container text-center">
+    <h2>Tours</h2>
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Assets/Img/tour1.jpg" class="card-img-top" alt="Tour 1">
+          <div class="card-body">
+            <h5 class="card-title">Montaña Extrema</h5>
+            <p class="card-text">Aventura de alta montaña con guías expertos.</p>
+            <a href="#" class="btn btn-primary">Reservar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Assets/Img/tour2.jpg" class="card-img-top" alt="Tour 2">
+          <div class="card-body">
+            <h5 class="card-title">Rafting Salvaje</h5>
+            <p class="card-text">Descenso por ríos rápidos llenos de adrenalina.</p>
+            <a href="#" class="btn btn-primary">Reservar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="Assets/Img/tour3.jpg" class="card-img-top" alt="Tour 3">
+          <div class="card-body">
+            <h5 class="card-title">Selva Amazónica</h5>
+            <p class="card-text">Exploración a pie por la selva tropical.</p>
+            <a href="#" class="btn btn-primary">Reservar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Preguntas Frecuentes</h2>
+    <div class="accordion" id="accordionFaq">
+      <!-- FAQ 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+            ¿Qué incluye el tour?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#accordionFaq">
+          <div class="accordion-body">Incluye transporte, guía, comida y seguro.</div>
+        </div>
+      </div>
+      <!-- FAQ 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+            ¿Es seguro para principiantes?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+          <div class="accordion-body">Sí, todos los niveles son bienvenidos.</div>
+        </div>
+      </div>
+      <!-- FAQ 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+            ¿Se puede cancelar?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#accordionFaq">
+          <div class="accordion-body">Sí, con al menos 48h de anticipación.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Formulario de contacto -->
+<section id="contacto" class="py-5">
+  <div class="container">
+    <h2 class="text-center">Contáctanos</h2>
+    <form class="needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" required>
+        <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="correo" required>
+        <div class="invalid-feedback">Por favor ingresa un correo válido.</div>
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+        <div class="invalid-feedback">Por favor escribe un mensaje.</div>
+      </div>
+      <button type="submit" class="btn btn-success">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>© 2025 SkyAdventure. Todos los derechos reservados.</p>
+  <p>Síguenos en 
+    <a href="#" class="text-white text-decoration-none">Facebook</a> | 
+    <a href="#" class="text-white text-decoration-none">Instagram</a>
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Assets/Js/script.js"></script>
+</body>
+</html>
